@@ -17,8 +17,7 @@ Plugin 'pangloss/vim-javascript'
 
 Plugin 'bronson/vim-trailing-whitespace'
 
-" not compatible with vim version
-" Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 
 Bundle 'myusuf3/numbers.vim'
 
