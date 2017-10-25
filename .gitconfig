@@ -12,6 +12,9 @@
 	br = branch
 	c = commit
 	st = status
+  stpm = stash push -m 
+  stl = stash list
+  stpop = "!sh -c \"git stash pop stash@{$1}\" -"
 [user]
 	name = Oliver Scott
 	email = oliverhbscott@gmail.com

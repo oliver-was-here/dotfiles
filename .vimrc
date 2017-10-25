@@ -29,6 +29,9 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
+" Reload file if changed while open
+set autoread
+
 " Fix backspace not working in insert (lol vim)
 set backspace=indent,eol,start
 
