@@ -13,8 +13,10 @@
 	c = commit
 	st = status
   stpm = stash push -m 
-  stl = stash list
+  stli = stash list
+  stsho = "!sh -c \"git stash show -p stash@{$1}\" -"
   stpop = "!sh -c \"git stash pop stash@{$1}\" -"
+  strm = "!sh -c \"git stash drop stash@{$1}\" -"
 [user]
 	name = Oliver Scott
 	email = oliverhbscott@gmail.com
