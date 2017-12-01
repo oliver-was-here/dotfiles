@@ -23,3 +23,5 @@
 	email = oliverhbscott@gmail.com
 [credential]
 	helper = osxkeychain
+[rerere]
+  enabled = true
