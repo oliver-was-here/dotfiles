@@ -8,15 +8,45 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
-	co = checkout
-	br = branch
-	c = commit
-	st = status
+## LIST ALISES
+la = "!git config -l | grep alias | cut -c 7-"
+## LOG ALIASES ONE COMMIT PER LINE
+# without any bells and whistles
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+# with files changed per commit
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+# with dates
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+# with dates relative to today (e.g. 6 days ago, etc..)
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+# log history of the provided file (arg required)
+  fl = log -u
+## DIFF
+# diff cached
+dc = diff --cached
+# modified files in last commit
+  dl = "!git ll -1"
+# compared to last commit
+  dlc = diff --cached HEAD^
+# compare to specific commit
+  diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+## STASH
   stpm = stash push -m 
   stli = stash list
   stsho = "!sh -c \"git stash show -p stash@{$1}\" -"
   stpop = "!sh -c \"git stash pop stash@{$1}\" -"
   strm = "!sh -c \"git stash drop stash@{$1}\" -"
+## GREP
+# find file in codebse
+  f = "!git ls-files | grep -i"
+# find string in codebase
+  grep = grep -Ii
+## MISC
+  cp = cherry-pick
+	co = checkout
+	br = branch
+	c = commit
+	st = status
   cor = "!sh -c \"git checkout -b $1 origin/$1\" -"
 [user]
 	name = Oliver Scott
