@@ -18,6 +18,25 @@
   stpop = "!sh -c \"git stash pop stash@{$1}\" -"
   strm = "!sh -c \"git stash drop stash@{$1}\" -"
   cor = "!sh -c \"git checkout -b $1 origin/$1\" -"
+  dif = diff
+  dc = diff --cached
+  fp = fetch -p
+  pr = pull -r
+  st = status
+  ss = status -s
+  co = checkout
+  ci = commit
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+  l = log --graph --decorate --pretty=oneline --abbrev-commit
+  la = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+  ignored = ls-files -o -i --exclude-standard
+  sub = submodule
+  set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ltag = describe --tags --abbrev=0
+  lt = git log --tags --simplify-by-decoration
+
 [user]
 	name = Oliver Scott
 	email = oliverhbscott@gmail.com
