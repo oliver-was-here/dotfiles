@@ -62,6 +62,7 @@
   sub = submodule
   set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
   ltag = describe --tags --abbrev=0
+  rd = rebase develop
 [user]
 	name = Oliver Scott
 	email = oliverhbscott@gmail.com
