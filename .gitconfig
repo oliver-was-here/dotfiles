@@ -9,37 +9,42 @@
 	trustExitCode = true
 [alias]
 ## LIST ALISES
-la = "!git config -l | grep alias | cut -c 7-"
+  la = "!git config -l | grep alias | cut -c 7-"
 ## LOG ALIASES ONE COMMIT PER LINE
-# without any bells and whistles
+  # without any bells and whistles
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-# with files changed per commit
+  # with files changed per commit
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-# with dates
+  # with dates
   lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-# with dates relative to today (e.g. 6 days ago, etc..)
+  # with dates relative to today (e.g. 6 days ago, etc..)
   ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-# log history of the provided file (arg required)
+  # log history of the provided file (arg required)
   fl = log -u
+  # logging with graphs (courtesy of alex)
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+  # log tags
+  lt = git log --tags --simplify-by-decoration
 ## DIFF
-# diff cached
-dc = diff --cached
-# modified files in last commit
+  # diff cached
+  dc = diff --cached
+  # modified files in last commit
   dl = "!git ll -1"
-# compared to last commit
+  # compared to last commit
   dlc = diff --cached HEAD^
-# compare to specific commit
+  # compare to specific commit
   diffr  = "!f() { git diff "$1"^.."$1"; }; f"
-## STASH
+  ## STASH
   stpm = stash push -m 
   stli = stash list
   stsho = "!sh -c \"git stash show -p stash@{$1}\" -"
   stpop = "!sh -c \"git stash pop stash@{$1}\" -"
   strm = "!sh -c \"git stash drop stash@{$1}\" -"
 ## GREP
-# find file in codebse
+  # find file in codebse
   f = "!git ls-files | grep -i"
-# find string in codebase
+  # find string in codebase
   grep = grep -Ii
 ## MISC
   cp = cherry-pick
@@ -47,26 +52,16 @@ dc = diff --cached
 	br = branch
 	c = commit
 	st = status
+  ss = status -s
   cor = "!sh -c \"git checkout -b $1 origin/$1\" -"
   dif = diff
   dc = diff --cached
   fp = fetch -p
   pr = pull -r
-  st = status
-  ss = status -s
-  co = checkout
-  ci = commit
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
-  l = log --graph --decorate --pretty=oneline --abbrev-commit
-  la = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
   ignored = ls-files -o -i --exclude-standard
   sub = submodule
   set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
-  lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   ltag = describe --tags --abbrev=0
-  lt = git log --tags --simplify-by-decoration
-
 [user]
 	name = Oliver Scott
 	email = oliverhbscott@gmail.com
