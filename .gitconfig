@@ -49,6 +49,8 @@
 ## MISC
   cp = cherry-pick
 	co = checkout
+  cod = checkout develop
+  com = checkout master
 	br = branch
 	c = commit
 	st = status
