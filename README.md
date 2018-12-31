@@ -2,6 +2,7 @@
 Install homebrew ya dingus
 
 #### Vim
+1. `$ brew install vim && brew install macvim`
 1. `$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 1. `$ vim /.vimrc`
 1. `$ :PluginInstall`
