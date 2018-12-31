@@ -99,3 +99,5 @@ let g:ctrlp_show_hidden = 1
 
 " auto-source vimrc after update
 autocmd bufwritepost .vimrc source $MYVIMRC
+
+set clipboard=unnamed
