@@ -21,5 +21,6 @@ Install homebrew ya dingus
 1. `$ brew install zsh-autosuggestions`
 1. configure iTerm:
    1. `System Preferences > Profiles >`
+      1. [`Keys > ...`](https://apple.stackexchange.com/a/136931/252775)
       1. `Colors > Presets > .Presets/iTermCustomSolarizedDark.itermcolors`
       1. `Text > Change Font > *.powerline`
