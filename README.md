@@ -17,3 +17,7 @@ Install homebrew ya dingus
       1. [`Keys > ...`](https://apple.stackexchange.com/a/136931/252775)
       1. `Colors > Presets > .Presets/iTermCustomSolarizedDark.itermcolors`
       1. `Text > Change Font > *.powerline`
+
+#### windows managemetn
+1. download hammer spoon `brew install --cask hammerspoon`
+2. download spoon for ShiftIt like window management: https://github.com/peterklijn/hammerspoon-shiftit
