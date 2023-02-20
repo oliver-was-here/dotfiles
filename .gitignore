@@ -1,13 +1,21 @@
-# Ignore everything
+git # Ignore everything
 *
 
 # But not these files...
-!.intellij_settings.jar
-!.gitignore
-!.gitconfig
-!.vimrc
-!.bash_profile
-!.zshrc
+!additional-dotfiles
+!additional-dotfiles/**
+!dotfiles
+!dotfiles/*
 !.Presets
 !.Presets/*
+!.bash_profile
+!.gitconfig
+!.gitignore
+!.hammerspoon
+!.hammerspoon/*
+!.intellij_settings.jar
+!.p10k.zsh
+!.vimrc
+!.zshrc
+!.zshrc
 !README.md
